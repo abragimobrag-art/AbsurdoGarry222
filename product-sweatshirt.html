@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зелёный Хагрид - Гарри Поттер Мерч</title>
+    <link rel="stylesheet" href="styles.css">
+
+
+
+</head>
+<body>
+    
+
+    <section class="product-section">
+        <div class="container">
+            <a href="merch.html" class="back-button">← Назад в магазин</a>
+            <div class="product-detail">
+                <div class="product-gallery">
+                    <div class="product-main-image">
+                        <img src="шрекВшляпеЗЕЛЕНЫЙ.png" alt="Зелёный Хагрид - свитшот">
+                    </div>
+           
+                </div>
+                <div class="product-info">
+                    <h1>Зелёный Хагрид</h1>
+                    <div class="product-price">1 999 ₽</div>
+                    <div class="size-selector">
+                        <h3>Выберите размер:</h3>
+                        <div class="size-options" id="size-options">
+                            <div class="size-option" data-size="XS">XS</div>
+                            <div class="size-option" data-size="S">S</div>
+                            <div class="size-option" data-size="M">M</div>
+                            <div class="size-option" data-size="L">L</div>
+                            <div class="size-option" data-size="XL">XL</div>
+                            <div class="size-option" data-size="XXL">XXL</div>
+                        </div>
+                    </div>
+                    <div style="margin: 25px 0;">
+                        <button onclick="addToCart({id:16, name:'Зелёный Хагрид', price:1999, image:'шрекВшляпеЗЕЛЕНЫЙ.png'}, 'свитшоты', selectedSize)" class="btn btn-primary" style="padding: 12px 30px; font-size: 1.1rem; width: 100%;">
+                            Добавить в корзину
+                        </button>
+                    </div>
+                  
+                    <div class="tabs">
+                        <div class="tab-headers">
+                            <button class="tab-header active" onclick="switchTab('description')">Описание</button>
+                            <button class="tab-header" onclick="switchTab('details')">Подробнее</button>
+                            <button class="tab-header" onclick="switchTab('size-guide')">Таблица размеров</button>
+                        </div>
+                        <div class="tab-content" id="tab-content">
+                            <div id="description-content">
+                                <h3>Свитшот "Зелёный Хагрид"</h3>
+                                <p>Уникальный свитшот с принтом культового персонажа вселенной Гарри Поттера - Хагрида, выполненный в зелёных тонах. Идеально сочетает в себе комфорт и стиль.</p>
+                                <p>Изготовлен из высококачественного хлопка премиум-класса, который обеспечивает мягкость, воздухопроницаемость и долговечность. Свитшот сохраняет форму даже после многократных стирок.</p>
+                                <p>Дизайн разработан специально для фанатов магического мира. Принт нанесен методом прямой печати, что гарантирует яркость и стойкость цветов.</p>
+                            </div>
+                            <div id="details-content" style="display: none;">
+                                <h3>Детальная информация</h3>
+                                <p><strong>Состав:</strong> 100% хлопок (кольцевая пряжа)</p>
+                                <p><strong>Плотность:</strong> 280 г/м²</p>
+                                <p><strong>Крой:</strong> Оверсайз (свободный)</p>
+                                <p><strong>Рукава:</strong> Реглан</p>
+                                <p><strong>Принт:</strong> Прямая печать</p>
+                                <p><strong>Производство:</strong> Узбекистан</p>
+                                <p><strong>Стирка:</strong> Машинная стирка при 30°C, отжим на средних оборотах</p>
+                                <p><strong>Глажка:</strong> Гладить с изнанки, температура до 110°C</p>
+                                <p><strong>Отбеливание:</strong> Запрещено</p>
+                                <p><strong>Сушка:</strong> Естественная сушка в расправленном виде</p>
+                                <p><strong>Упаковка:</strong> Индивидуальный полиэтиленовый пакет, этикетка с размерами</p>
+                                <p><strong>Гарантия:</strong> 6 месяцев на отсутствие производственных дефектов</p>
+                            </div>
+                            <div id="size-guide-content" style="display: none;">
+                                <h3>Таблица размеров (в см)</h3>
+                                <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+                                    <thead>
+                                        <tr style="background: #504343;">
+                                            <th style="padding: 8px; border: 1px solid #727070;">Размер</th>
+                                            <th style="padding: 8px; border: 1px solid #727070;">Длина</th>
+                                            <th style="padding: 8px; border: 1px solid #727070;">Ширина</th>
+                                            <th style="padding: 8px; border: 1px solid #727070;">Длина рукава</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td style="padding: 8px; border: 1px solid #727070;">XS</td><td style="padding: 8px; border: 1px solid #727070;">66</td><td style="padding: 8px; border: 1px solid #727070;">51</td><td style="padding: 8px; border: 1px solid #727070;">62</td></tr>
+                                        <tr><td style="padding: 8px; border: 1px solid #727070;">S</td><td style="padding: 8px; border: 1px solid #727070;">69</td><td style="padding: 8px; border: 1px solid #727070;">54</td><td style="padding: 8px; border: 1px solid #727070;">64</td></tr>
+                                        <tr><td style="padding: 8px; border: 1px solid #727070;">M</td><td style="padding: 8px; border: 1px solid #727070;">72</td><td style="padding: 8px; border: 1px solid #727070;">57</td><td style="padding: 8px; border: 1px solid #727070;">66</td></tr>
+                                        <tr><td style="padding: 8px; border: 1px solid #727070;">L</td><td style="padding: 8px; border: 1px solid #727070;">75</td><td style="padding: 8px; border: 1px solid #727070;">60</td><td style="padding: 8px; border: 1px solid #727070;">68</td></tr>
+                                        <tr><td style="padding: 8px; border: 1px solid #727070;">XL</td><td style="padding: 8px; border: 1px solid #727070;">78</td><td style="padding: 8px; border: 1px solid #727070;">63</td><td style="padding: 8px; border: 1px solid #727070;">70</td></tr>
+                                        <tr><td style="padding: 8px; border: 1px solid #727070;">XXL</td><td style="padding: 8px; border: 1px solid #727070;">81</td><td style="padding: 8px; border: 1px solid #727070;">66</td><td style="padding: 8px; border: 1px solid #727070;">72</td></tr>
+                                    </tbody>
+                                </table>
+                                <p style="margin-top: 15px; font-size: 0.9rem; color: #aaa;">*Размеры указаны для полуобхвата груди (ширина × 2)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="database.js"></script>
+    <script src="auth.js"></script>
+    <script src="merch-script.js"></script>
+    <script>
+        function toggleMobileMenu() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        }
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-header').forEach(h => h.classList.remove('active'));
+            event.target.classList.add('active');
+            document.getElementById('description-content').style.display = 'none';
+            document.getElementById('details-content').style.display = 'none';
+            document.getElementById('size-guide-content').style.display = 'none';
+            document.getElementById(tabName + '-content').style.display = 'block';
+        }
+
+        let selectedSize = null;
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const sizeOptions = document.querySelectorAll('#size-options .size-option');
+            sizeOptions.forEach(option => {
+                option.addEventListener('click', () => {
+                    sizeOptions.forEach(opt => opt.classList.remove('selected'));
+                    option.classList.add('selected');
+                    selectedSize = option.getAttribute('data-size');
+                });
+            });
+            const defaultSize = document.querySelector('#size-options .size-option[data-size="M"]');
+            if (defaultSize) defaultSize.click();
+        });
+    </script>
+</body>
+</html>

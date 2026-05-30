@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товар - Гарри Поттер</title>
+    <link rel="stylesheet" href="styles.css">
+
+
+</head>
+<body>
+    <!-- Верхняя навигационная панель -->
+    <header>
+        <nav class="top-nav">
+          
+
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="merch.html" class="nav-link">Магазин Мерча</a>
+                </li>
+                
+                <li class="nav-item" onmouseover="showDropdown('characters')" onmouseout="hideDropdown('characters')">
+                    Действующие лица и Другие органы
+                    <div id="characters-dropdown" class="nav-dropdown">
+                        <a href="info0-1.html" class="dropdown-item">Воландеморт</a>
+                        <a href="info0-2.html" class="dropdown-item">Гарри Поттер</a>
+                        <a href="info0-3.html" class="dropdown-item">Гермиона Гранат</a>
+                        <a href="info0-4.html" class="dropdown-item">Рома Визгливый</a>
+                        <a href="info0-5.html" class="dropdown-item">Драко Малый(хорёк)</a>
+                    </div>
+                </li>
+                
+                <li class="nav-item" onmouseover="showDropdown('other-organs')" onmouseout="hideDropdown('other-organs')">
+                    Шизофренические рассказы
+                    <div id="other-organs-dropdown" class="nav-dropdown">
+                        <a href="kniga1-1.html" class="dropdown-item">Гарри Поттер и Шарообразный колобок</a>
+                        <a href="kniga1-2.html" class="dropdown-item">Гарри Поттер и Бузинная палочка</a>
+                        <a href="kniga1-3.html" class="dropdown-item">Гарри Поттер и Философская Комната</a>
+                        <a href="kniga1-4.html" class="dropdown-item">Гарри Поттер и Тайный Азкабан</a>
+                    </div>
+                </li>
+                
+                <li class="nav-item" onmouseover="showDropdown('institutions')" onmouseout="hideDropdown('institutions')">
+                    Учреждения и другие понятия
+                    <div id="institutions-dropdown" class="nav-dropdown">
+                        <a href="infa2-1.html" class="dropdown-item">Хогвартс</a>
+                        <a href="infa2-2.html" class="dropdown-item">Факультеты</a>
+                        <a href="infa2-3.html" class="dropdown-item">Магические понятия</a>
+                    </div>
+                </li>
+              
+            </ul>
+
+            <div class="nav-profile">
+                <div class="profile-icon">
+                    <img src="profile.png" alt="Профиль">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Секция товара -->
+    <section class="product-section">
+        <div class="container">
+            <a href="merch.html" class="back-button">← Назад в магазин</a>
+            
+            <div id="product-content">
+                <!-- Контент будет загружен через JavaScript -->
+                <div style="text-align: center; padding: 60px 20px;">
+                    <h2>Загрузка товара...</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="database.js"></script>
+    <script src="auth.js"></script>
+    <script src="product.js"></script>
+    <script src="script.js"></script>
+    
+    <script>
+    function toggleMobileMenu() {
+        const navMenu = document.querySelector('.nav-menu');
+        navMenu.classList.toggle('active');
+    }
+    </script>
+</body>
+</html>

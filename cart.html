@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - Гарри Поттер</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+   
+
+    <section class="cart-section">
+        <div class="container">
+            <div id="cart-content">
+                <div style="text-align: center; padding: 60px 20px;">
+                    <h2>Загрузка корзины...</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="database.js"></script>
+    <script src="auth.js"></script>
+    <script src="cart.js"></script>
+    <script src="script.js"></script>
+    <script>
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active');
+        }
+        function showDropdown(id) {
+            if (window.innerWidth > 768) {
+                const el = document.getElementById(id + '-dropdown');
+                if (el) el.classList.add('visible');
+            }
+        }
+        function hideDropdown(id) {
+            if (window.innerWidth > 768) {
+                const el = document.getElementById(id + '-dropdown');
+                if (el) el.classList.remove('visible');
+            }
+        }
+    </script>
+</body>
+</html>

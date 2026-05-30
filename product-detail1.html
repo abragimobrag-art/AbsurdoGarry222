@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поттер и шляпа - Гарри Поттер Мерч</title>
+    <link rel="stylesheet" href="styles.css">
+
+
+</head>
+<body>
+   
+
+    <section class="product-section">
+        <div class="container">
+            <a href="merch.html" class="back-button">← Назад в магазин</a>
+            <div class="product-detail">
+                <div class="product-gallery">
+                    <div class="product-main-image">
+                        <img src="брелок1.png" alt="Поттер и шляпа - брелок">
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h1>Поттер и шляпа</h1>
+                    <div class="product-price">299 ₽</div>
+                    <div style="margin: 30px 0;">
+                        <button onclick="addToCart({id:1, name:'Поттер и шляпа', price:299, image:'брелок1.png'}, 'брелки')" class="btn btn-primary" style="padding: 15px 40px; font-size: 1.2rem; width: 100%;">
+                            Добавить в корзину
+                        </button>
+                    </div>
+                    <div class="product-example-details">
+                        <h3>Характеристики</h3>
+                        <ul class="details-list">
+                            <li><span class="detail-label">Материал:</span><span class="detail-value">Металлический сплав</span></li>
+                            <li><span class="detail-label">Размер:</span><span class="detail-value">5 × 3 см</span></li>
+                            <li><span class="detail-label">Вес:</span><span class="detail-value">25 грамм</span></li>
+                            <li><span class="detail-label">Покрытие:</span><span class="detail-value">Антикоррозийное</span></li>
+                            <li><span class="detail-label">Цвет:</span><span class="detail-value">Серебристый</span></li>
+                            <li><span class="detail-label">Крепление:</span><span class="detail-value">Карабин из нержавеющей стали</span></li>
+                        </ul>
+                    </div>
+                    <div class="tabs">
+                        <div class="tab-headers">
+                            <button class="tab-header active" onclick="switchTab('description')">Описание</button>
+                            <button class="tab-header" onclick="switchTab('details')">Подробнее</button>
+                            <button class="tab-header" onclick="switchTab('delivery')">Доставка</button>
+                        </div>
+                        <div class="tab-content" id="tab-content">
+                            <div id="description-content">
+                                <h3>Официальный брелок "Поттер и шляпа"</h3>
+                                <p>Этот уникальный брелок изображает культовый момент из вселенной Гарри Поттера - знаменитую Распределяющую шляпу, которая выбирала факультет для каждого ученика Хогвартса.</p>
+                                <p>Брелок выполнен из высококачественного металлического сплава с детализированной проработкой всех элементов. Идеально подходит для ключей, рюкзаков или в качестве коллекционного предмета.</p>
+                                <p>Каждый брелок упакован в индивидуальную подарочную коробку с символикой Хогвартса.</p>
+                            </div>
+                            <div id="details-content" style="display: none;">
+                                <h3>Детальная информация</h3>
+                                <p><strong>Производство:</strong> Изготовлено на лицензированном производстве в России под контролем Warner Bros.</p>
+                                <p><strong>Уход:</strong> Протирать сухой мягкой тканью. Избегать попадания влаги и агрессивных химических веществ.</p>
+                                <p><strong>Гарантия:</strong> 1 год на отсутствие производственных дефектов.</p>
+                                <p><strong>Сертификация:</strong> Имеет все необходимые сертификаты качества и безопасности.</p>
+                                <p><strong>Упаковка:</strong> Картонная коробка с магнитной застежкой, размером 8×6×3 см.</p>
+                            </div>
+                            <div id="delivery-content" style="display: none;">
+                                <h3>Информация о доставке</h3>
+                                <p><strong>Сроки доставки по России:</strong> 5-14 рабочих дней в зависимости от региона.</p>
+                                <p><strong>Способы доставки:</strong> Почта России, СДЭК, Boxberry.</p>
+                                <p><strong>Стоимость доставки:</strong> От 250 ₽, бесплатная доставка при заказе от 3000 ₽.</p>
+                                <p><strong>Самовывоз:</strong> Доступен в Москве и Санкт-Петербурге.</p>
+                                <p><strong>Международная доставка:</strong> Доступна в страны СНГ и Европы.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="database.js"></script>
+    <script src="auth.js"></script>
+    <script src="merch-script.js"></script>
+    <script>
+        function toggleMobileMenu() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        }
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-header').forEach(h => h.classList.remove('active'));
+            event.target.classList.add('active');
+            document.getElementById('description-content').style.display = 'none';
+            document.getElementById('details-content').style.display = 'none';
+            document.getElementById('delivery-content').style.display = 'none';
+            document.getElementById(tabName + '-content').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

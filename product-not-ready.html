@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товар готовится — Магазин Мерча</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .not-ready-section {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .not-ready-container {
+            max-width: 560px;
+            width: 100%;
+            text-align: center;
+            animation: fadeUp 0.7s cubic-bezier(.22,.68,0,1.1) both;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .not-ready-card {
+            background: linear-gradient(135deg, #1a1430 0%, #2a1f3e 100%);
+            border: 1px solid rgba(242, 201, 76, 0.3);
+            border-radius: 24px;
+            padding: 56px 48px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 24px 64px rgba(0,0,0,0.5), 0 0 40px rgba(242,201,76,0.05);
+        }
+
+        .not-ready-card::before {
+            content: '';
+            position: absolute;
+            top: -80px; right: -80px;
+            width: 320px; height: 320px;
+            background: radial-gradient(circle, rgba(242,201,76,0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .not-ready-card::after {
+            content: '';
+            position: absolute;
+            bottom: -60px; left: -60px;
+            width: 260px; height: 260px;
+            background: radial-gradient(circle, rgba(94,61,138,0.2) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .not-ready-icon {
+            font-size: 4.5rem;
+            display: block;
+            margin-bottom: 24px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50%       { transform: translateY(-10px); }
+        }
+
+        .not-ready-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #F2C94C;
+            margin-bottom: 14px;
+            text-shadow: 0 0 20px rgba(242,201,76,0.25);
+            line-height: 1.3;
+            position: relative;
+            z-index: 1;
+        }
+
+        .not-ready-text {
+            font-size: 1rem;
+            color: #8a7faa;
+            line-height: 1.7;
+            margin-bottom: 36px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .not-ready-text strong {
+            color: #D9D2E9;
+        }
+
+        .not-ready-divider {
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #F2C94C, transparent);
+            margin: 0 auto 32px;
+            border-radius: 2px;
+        }
+
+        .not-ready-back {
+            display: inline-block;
+            padding: 14px 40px;
+            background: linear-gradient(135deg, #3d2a5e, #5e3d8a);
+            color: #F2C94C;
+            border: 1px solid rgba(242,201,76,0.5);
+            border-radius: 40px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+            letter-spacing: 0.5px;
+        }
+
+        .not-ready-back:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 28px rgba(242,201,76,0.2);
+            color: #fff;
+            border-color: #F2C94C;
+        }
+
+        .not-ready-sparks {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 28px;
+        }
+
+        .spark {
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: #F2C94C;
+            opacity: 0.4;
+            animation: sparkle 1.6s ease-in-out infinite;
+        }
+        .spark:nth-child(2) { animation-delay: 0.3s; }
+        .spark:nth-child(3) { animation-delay: 0.6s; }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0.2; transform: scale(0.8); }
+            50%       { opacity: 1;   transform: scale(1.3); }
+        }
+
+        @media (max-width: 480px) {
+            .not-ready-card { padding: 40px 28px; }
+            .not-ready-title { font-size: 1.4rem; }
+        }
+    </style>
+
+
+
+</head>
+<body>
+
+   
+
+    <section class="not-ready-section">
+        <div class="not-ready-container">
+            <div class="not-ready-card">
+                <span class="not-ready-icon">🔮</span>
+
+                <h1 class="not-ready-title">Страница товара<br>ещё готовится</h1>
+
+                <div class="not-ready-divider"></div>
+
+                <p class="not-ready-text">
+                    Наши волшебники колдуют над этой страницей.<br>
+                    <strong>Добавить товар в корзину</strong> можно прямо из магазина —<br>
+                    кнопка «Добавить в корзину» работает!
+                </p>
+
+                <div class="not-ready-sparks">
+                    <div class="spark"></div>
+                    <div class="spark"></div>
+                    <div class="spark"></div>
+                </div>
+
+                <a href="merch.html" class="not-ready-back">← Вернуться в магазин</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="database.js"></script>
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+    <script>
+        function toggleMobileMenu() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            const user = db.getCurrentUser();
+            const authBtns = document.getElementById('auth-buttons');
+            const profileIcon = document.getElementById('profile-icon');
+            if (user) {
+                authBtns.style.display = 'none';
+                profileIcon.style.display = 'block';
+            } else {
+                authBtns.style.display = 'flex';
+                profileIcon.style.display = 'none';
+            }
+            profileIcon.addEventListener('click', function () {
+                window.location.href = 'profile.html';
+            });
+        });
+    </script>
+</body>
+</html>
